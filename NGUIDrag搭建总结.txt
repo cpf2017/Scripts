@@ -1,0 +1,26 @@
+以官方案例搭建，UI Root下分这么几大类：
+
+Container-Left(左部容器)、Container-Right(右部容器)、BackGround(背景)
+
+首先，在Background(背景上添加)UI Drag Drop Root(拖拽释放根控制)；
+
+Container-Left(左部容器)锚点设定UI  Root，添加Box Collider，UI Drag Drop Container(拖拽释放容器)脚本，Reparent Target(重定父级目标)属性设定为Grid子类(这一步实现了外部对象可以放置到此区域内)，再添加UI Drag Scroll View(拖拽显示区域)脚本，用以指定拖拽显示区域脚本的对象；
+
+Container-Left(左部容器)拥有以下几个子类：
+
+Backdrop(释放背景)用于盛放释放对象的区域的背景，锚点设置为其父级；
+
+Left Scroll View(左显示区域)用于限定显示区域，锚点设置为其父级，其中的UI Scroll View 脚本中的属性根据需要进行设定，其子类有Grid，其中的UI Grid脚本中属性根据需要进行设定；
+
+Scroll Bar设定锚点为左容器既可；
+
+重点来了！显示区域的每个物品都有图标和背景两个部分，我们分开来说，首先，图标仅仅就是一张图片，一个精灵而已，不需要另外设置，背景上脚本就多了，首先
+
+加上Box Collider和UI Botton以进行交互，UI Botton的Tween Target(中间目标)设定为自身，添加UI Drag Scroll View (拖拽显示区域)脚本，不需要设定属性 ，再添加Example Drag Drop Item(拖拽释放项目)脚本，根据实际需求设置其中的Restriction(限制)属性，勾选Interactable(相互作用)属性，然后将自身对象拖拽到Prefab属性中；
+
+自此，Container-Left(左部容器)全部设定完毕，右部照抄即可。
+
+以上工作可以实现什么？
+
+在我们进行了上述操作后，我们可以实现视野内每个图标的拖拽和释放，而且当图标被拖拽释放到非指定区域会自行恢复原有状态，当图标被拖拽释放到指定区域有插队并自动对齐动作，指定区域内鼠标按下可进行项目滚动，滚动条实时显示进度，拖动滚动条可快速到达指定区域。
+

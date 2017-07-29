@@ -1,0 +1,20 @@
+ChatWindow聊天窗口下分这么几大块：
+
+ChatBG聊天信息显示背景，包含子类Lable显示文本，用以显示输入记录。
+
+ChatInput聊天文本输入框、包含子类Lable输入文本，用以接收用户输入。
+
+Scroll Bar滑动条，用以快速查找聊天信息。
+
+
+搭建步骤：
+
+ChatWindow加上BoxCllider组件，再加上UI Drag Object(拖拽对象)脚本，Target(目标)属性设置为自身，Keep Visible(保持可见)属性设置为自身，实现拖动效果；
+
+ChatBG的Anchors(锚点)Target(目标)属性赋值为其父级，加上UI Text List(文本列表)脚本，其中Text Lable(显示文本)属性赋值为其子类Lable对象，代表聊天信息显示此Lable内容，Scroll Bar属性赋值为滑动条，Style属性选择为Chat(聊天)选项，加上Box Collider实现点击互动；
+
+ChatBG的Lable子类，修改锚点为其父类即可；
+
+ChatInput的锚点也设置为其父类，重点来了！加上Chat Input脚本，其中Text List(文本显示列表)毫无疑问为ChatBG，再加上UI Input脚本，其中Lable赋值为子类Lable对象，代表输入文本来自子类文本值，On Submit(提交)对象赋值为ChatInput，方法赋值为ChatInput/On Submit，意为将文本提交给父级，再加上UI Key Binding(按键捆绑)脚本，其中Key Code属性赋值为Return(回车键)，Action(行为)属性选Select(挑选),最后加上Box Collider碰撞器，用以点击交互；
+
+ChatInput的Lable子类，修改锚点为其父类即可。
