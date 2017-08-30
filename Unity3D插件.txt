@@ -1,0 +1,45 @@
+一.Unity3D常用插件:
+
+1.NGUI:UI搭建插件
+2.itween:动画库，作者创建它的目的就是最小的投入实现最大的产出.让你做开发更轻松,用它可以轻松实现各种动画,晃动,旋转,移动,褪色,上色,控制音频等等。
+3.DoTween：和itween一样都是做插值动画的，
+4.A*：寻路插件
+5.UluaSimpleFramework：热更新插件
+6.Easy-Touch:摇杆插件，用于制作手机的虚拟遥感和虚拟按钮
+7.Steam-VR：开发VR游戏的插件
+8.vive teleporter：VR游戏瞬移插件
+9.googleVRSDK：制作全景展示图
+10.Easy-AR：增强现实插件
+11.VRToolKit：是个很好用的使用Unity开发Steam VR的工具集，
+       主要功能包括：
+              （1）具有别名的控制器按钮事件，
+              （2）控制世界指针（激光指针），
+              （3）玩家瞬间转移，
+              （4）使用控制器抓起/握住物体，
+              （5）使用控制器与物体交互，              
+              （6）把游戏物体变成交互式的UI元素，
+
+12.FX Maker是一款制作特效的插件，
+13.Ferr2D：制作2D地形插件
+14.Easy-Road3D:建路插件
+15.Player Maker:用于制作怪物AI插件
+16.AVProVideo:音频播放插件
+17.FingerGestures：Unity中的一个手势操作的插件
+18.BehaviourTree：AI行为树，让游戏里的角色或者NPC能执行预设的AI逻辑。
+19.UniWeb:Unity中嵌入网页页面的插件。
+20.UI Tween:新版UI动画管理插件。
+21.LeanTouch:AR交互插件
+
+二.常用数据结构：
+   Array，ArrayList，List<T>，LinkedList<T>，Queue<T>，Stack<T>，Dictionary<K,T>
+（1）数组Array：　　
+    1.数组是最简单的数据结构。其具有如下特点：
+    2.数组存储在连续的内存上。
+    3.数组的内容都是相同类型。
+    4.数组可以直接通过下标访问。
+（2）集合ArrayList：为了解决数组创建时必须指定长度以及只能存放相同类型的缺点而推出的数据结构
+（3）List<T>泛型List：为了解决ArrayList不安全类型与装箱拆箱的缺点，所以出现了泛型的概念
+（4）链表LinkedList<T>：和上述的数组最大的不同之处就是在于链表在内存存储的排序上可能是不连续的     。这是由于链表是通过上一个元素指向下一个元素来排列的，所以可能不能通过下标来访问
+（5）队列Queue<T>：在Queue<T>这种数据结构中，最先插入在元素将是最先被删除；反之最后插入的元素     将最后被删除，因此队列又称为“先进先出”。
+（6）栈Stack<T>：与Queue<T>相对，当需要使用后进先出顺序（LIFO）的数据结构时，我们就需要用到Stack<T>了。
+（7）字典Dictionary<K,T>：需要键值对，对数据可以快速操作。
